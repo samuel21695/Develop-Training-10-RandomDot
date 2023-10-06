@@ -32,8 +32,16 @@
   <script>
     const gameBoard = document.getElementById('board');
     const button = document.getElementById('btn');
-    btn.addEventListener('click', function() {
+    const createDot = document.createElement('div');
 
+    let startValue = 0;
+
+    // 클릭하면 div 생성
+    // 클릭하면 계속 생성 하는 거
+    btn.addEventListener('click', function() {
+      interval = setInterval(function() {
+        gameBoard.appendChild(createDot)
+      }, 50);
     })
     
 
