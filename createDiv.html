@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root > div{
+      width: 10px;
+      height: 10px;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <button id="btn">click</button>
+  <script>
+    const root = document.getElementById('root')
+    const button = document.getElementById('btn')
+    let createDiv = document.createElement('div');
+
+      button.addEventListener('click', function(){
+        interval = setInterval(function() {
+          root.appendChild(document.createElement('div'));
+        }, 100)
+      })
+
+  </script>
+</body>
+</html>
